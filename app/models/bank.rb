@@ -3,5 +3,5 @@ class Bank < ApplicationRecord
   has_many :accounts, dependent: :destroy
   has_many :account_logs, through: :accounts
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: { scope: :user}
 end

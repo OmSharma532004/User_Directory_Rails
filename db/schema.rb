@@ -29,7 +29,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_19_083422) do
     t.decimal "balance", precision: 10, scale: 2
     t.bigint "bank_id", null: false
     t.datetime "created_at", null: false
-    t.bigint "type"
+    t.bigint "type_of_account"
     t.datetime "updated_at", null: false
     t.index ["bank_id"], name: "index_accounts_on_bank_id"
   end
